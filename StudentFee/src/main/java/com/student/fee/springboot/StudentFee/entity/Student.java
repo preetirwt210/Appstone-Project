@@ -34,13 +34,16 @@ public class Student {
 	
 	@Column(name="Account_Heads")
 	private String accountHeads;
+	
+	@Column(name="Refundable")
+	private String Refundable;
 	public Student() {
 		
 	}
 
 
 	public Student(int id, String feeName, String periodicity, String fineApplicable, String concessionApplicable,
-			String payementPrior, String accountHeads) {
+			String payementPrior, String accountHeads, String Refundable ) {
 		super();
 		this.id = id;
 		this.feeName = feeName;
@@ -49,6 +52,17 @@ public class Student {
 		this.concessionApplicable = concessionApplicable;
 		this.payementPrior = payementPrior;
 		this.accountHeads = accountHeads;
+		this.Refundable=Refundable;
+	}
+
+
+	public String getRefundable() {
+		return Refundable;
+	}
+
+
+	public void setRefundable(String refundable) {
+		Refundable = refundable;
 	}
 
 
@@ -126,7 +140,7 @@ public class Student {
 	public String toString() {
 		return "Student [id=" + id + ", feeName=" + feeName + ", periodicity=" + periodicity + ", fineApplicable="
 				+ fineApplicable + ", concessionApplicable=" + concessionApplicable + ", payementPrior=" + payementPrior
-				+ ", accountHeads=" + accountHeads + "]";
+				+ ", accountHeads=" + accountHeads + ", Refundable=" + Refundable + "]";
 	}
 
 	
